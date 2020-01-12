@@ -1,0 +1,179 @@
+mixin alumni_inside(cohort, use_compact)
+  if cohort == 'bootcamp_alumni'
+      +alumni_inside('spring2019', use_compact)
+      +alumni_inside('winter2019', use_compact)
+      +alumni_inside('fall2018', use_compact)
+      +alumni_inside('summer2018', use_compact)
+      +alumni_inside('spring2018', use_compact)
+      +alumni_inside('winter2018', use_compact)
+      +alumni_inside('fall2017', use_compact)
+  if cohort == 'phd_healthcare'
+      +dp('Pranav Rajpurkar', 'phd', false, use_compact)
+      +dp('Anand Avati', 'phd', false, use_compact)
+      +dp('Jeremy Irvin', 'phd', false, use_compact)
+      +dp('Sharon Zhou', 'phd', false, use_compact)
+  if cohort == 'medical_faculty'
+      +dp('Nigam Shah', 'prof', false, use_compact)
+      +dp('Matt Lungren', 'prof', false, use_compact)
+      +dp('Curt Langlotz', 'prof', false, use_compact)
+      +dp('Jeanne Shen', 'prof', false, use_compact)
+      +dp('Sanjay Basu', 'prof', false, use_compact)
+      +dp('Bhavik Patel', 'prof', false, use_compact)
+      +dp('Kristen Yeom', 'prof', false, use_compact)
+      +dp('Leanne Williams', 'prof', false, use_compact)
+      +dp('Utkan Demirci', 'prof', false, use_compact)
+      +dp('Gozde Durmus', 'prof', false, use_compact)
+      +dp('Sidhartha Sinha', 'prof', false, use_compact)
+      +dp('Catherine Hogan', 'Instructor', false, use_compact)
+  if cohort == 'climate_faculty'
+      +dp('Rob Jackson', 'prof', false, use_compact)
+      +dp('Ram Rajagopal', 'prof', false, use_compact)
+      +dp('Sara Knox', 'prof', false, use_compact)
+  if cohort == 'fall2019'
+      +dp('Anirudh Joshi', 'ms', false, use_compact)
+      +dp('Cheuk To Tsui', 'ms', true, use_compact)
+      +dp('Ethan Chi', 'bs', true, use_compact)
+      +dp('Gordon Chi', 'bs', true, use_compact)
+      +dp('Hari Sowrirajan', 'ms', false, use_compact)
+      +dp('John Peruzzi', 'bs', true, use_compact)
+      +dp('Keyur Mithawala', 'MSx student', true, use_compact)
+      +dp('Michael Zhang', 'MD', true, use_compact)
+      +dp('Nick Phillips', 'ms', true, use_compact)
+      +dp('Phil Chen', 'ms', false, use_compact)
+  if cohort == 'ccfall2019'
+      +dp('Sonja Johnson', 'ms', false, use_compact)
+      +dp('Eric Zelikman', 'bs', false, use_compact)
+      +dp('Cooper Raterink', 'ms', false, use_compact)
+      +dp('Neel Ramachandran', 'ms', false, use_compact)
+  if cohort == 'ccsummer2019'
+      +dp('Neethu Renjith', 'ms', false, use_compact)
+      +dp('Jiyao Yuan', 'ms', false, use_compact)
+  if cohort == 'ccspring2019'
+      +dp('Fred Lu', 'ms', false, use_compact)
+      +dp('Andrew Kondrich', 'bs', false, use_compact)
+      +dp('Vincent Liu', 'bs', false, use_compact)
+      +dp('Jabs Aljubran', 'ms', false, use_compact)
+      +dp('Eva Zhang', 'bs', false, use_compact)
+      +dp('Will Deaderick', 'ms', false, use_compact)
+  if cohort == 'spring2019'
+      +dp('Ashwin Agrawal', 'phd', false, use_compact)
+      +dp('Christian Rose', 'MD', false, use_compact)
+      +dp('Emma Chen', 'ms', false, use_compact)
+      +dp('Jon Braatz', 'ms', false, use_compact)
+      +dp('Jose Giron', 'bs', false, use_compact)
+      +dp('Kaushik Ram Sadagopan', 'ms', false, use_compact)
+      +dp('Rui Aguiar', 'ms', false, use_compact)
+      +dp('Yancheng Li', 'ms', false, use_compact)
+  if cohort == 'winter2019'
+      +dp('Anuj Pareek', 'MD', false, use_compact)
+      +dp('Chris Wang', 'bs', false, use_compact)
+      +dp('Jingbo Yang', 'bs', false, use_compact)
+      +dp('Mark Sabini', 'bs', false, use_compact)
+      +dp('Minh Phu', 'bs', false, use_compact)
+      +dp('Nathan Dass', 'ms', false, use_compact)
+      +dp('Vinjai Vale', 'bs', false, use_compact)
+  if cohort == 'fall2018'
+      +dp('Alex Wang', 'bs', false, use_compact)
+      +dp('Amir Kiani', 'ms', false, use_compact)
+      +dp('Amit Schechter', 'bs', false, use_compact)
+      +dp('Andrew Kondrich', 'bs', false, use_compact)
+      +dp('Bora Uyumazturk', 'bs', false, use_compact)
+      +dp('Chloe O\'Connell', 'md', false, use_compact)
+      +dp('Jason Li', 'bs', false, use_compact)
+      +dp('Nishit Asnani', 'ms', false, use_compact)
+      +dp('Rebecca Gao', 'md', false, use_compact)
+      +dp('Soumya Patro', 'ms', false, use_compact)
+  if cohort == 'spring2018'
+      +dp('Behzad Haghgoo', 'bs', false, use_compact)
+      +dp('Ben Cohen-Wang', 'bs', false, use_compact)
+      +dp('Chris Chute', 'ms', false, use_compact)
+      +dp('Joe Lou', 'bs', false, use_compact)
+      +dp('Kelly Shen', 'ms', false, use_compact)
+      +dp('Meng Zhang', 'ms', false, use_compact)
+      +dp('Michael Ko', 'bs', false, use_compact)
+      +dp('Nidhi Manoj', 'bs', false, use_compact)
+      +dp('Philip Hwang', 'bs', false, use_compact)
+      +dp('Robin Cheong', 'bs', false, use_compact)
+      +dp('Silviana Ciurea Ilcus', 'ms', false, use_compact)
+      +dp('Yifan Yu', 'ms', false, use_compact)
+  if cohort == 'winter2018'
+      +dp('Allison Park', 'ms', false, use_compact)
+      +dp('Andrew Huang', 'bs', false, use_compact)
+      +dp('Atli Kosson', 'ms', false, use_compact)
+      +dp('Chris Lin', 'ms', false, use_compact)
+      +dp('Erik Jones', 'bs', false, use_compact)
+      +dp('Henrik Marklund', 'ms', false, use_compact)
+      +dp('Jessica Wetstone', 'ms', false, use_compact)
+      +dp('Matthew Sun', 'bs', false, use_compact)
+      +dp('Michael Bereket', 'bs', false, use_compact)
+      +dp('Nicholas Bien', 'bs', false, use_compact)
+      +dp('Norah Borus', 'bs', false, use_compact)
+      +dp('Shubhang Desai', 'bs', false, use_compact)
+      +dp('Suvadip Paul', 'ms', false, use_compact)
+      +dp('Thao Nguyen', 'bs', false, use_compact)
+      +dp('Tanay Kothari', 'bs', false, use_compact)
+  if cohort == 'fall2017'
+      +dp('Aarti Bagul', 'ms', false, use_compact)
+      +dp('Brandon Yang', 'bs', false, use_compact)
+      +dp('Daisy Ding', 'ms', false, use_compact)
+      +dp('Hershel Mehta', 'ms', false, use_compact)
+      +dp('Kaylie Zhu', 'bs', false, use_compact)
+      +dp('Tony Duan', 'ms', false, use_compact)
+  if cohort == 'summer2018'
+      +dp('Bryan Casey', 'jd', false, use_compact)
+      +dp('Dan Beksha', 'jd', false, use_compact)
+      +dp('James Rathmell', 'jd', false, use_compact)
+      +dp('Zach Harned', 'jd', false, use_compact)
+
+mixin alumni(cohort, use_compact)
+  if cohort == 'medical_faculty'
+      h3 Healthcare Bootcamp Faculty Collaborators
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'climate_faculty'
+      h3 Climate Change Bootcamp Faculty Collaborators
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'fall2019'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Fall 2019-2020
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'ccfall2019'
+    .cohort.clearfix
+      h3 Climate Change Bootcamp Fall 2019-2020
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'ccsummer2019'
+    .cohort.clearfix
+      h3 Climate Change Bootcamp Summer 2019
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'ccspring2019'
+    .cohort.clearfix
+      h3 Climate Change Bootcamp Spring 2018-2019
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'spring2019'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Spring 2018-2019
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'winter2019'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Winter 2018-2019
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'fall2018'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Fall 2018-2019
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'summer2018'
+    .cohort.clearfix
+      h3 Healthcare Law Summer 2018
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'spring2018'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Spring 2017-2018
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'winter2018'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Winter 2017-2018
+      +alumni_inside(cohort, use_compact)
+  if cohort == 'fall2017'
+    .cohort.clearfix
+      h3 Healthcare Bootcamp Fall 2017-2018
+      +alumni_inside(cohort, use_compact)
+

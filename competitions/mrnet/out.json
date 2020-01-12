@@ -1,0 +1,1175 @@
+{
+    "config": {
+        "allow_multiple_models": true,
+        "allow_orphans": true,
+        "count_failed_submissions": true,
+        "evaluate": {
+            "command": "python evaluate.py test-annotations.csv predictions.csv",
+            "dependencies": [
+                {
+                    "child_path": "evaluate.py",
+                    "parent_path": "",
+                    "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                },
+                {
+                    "child_path": "test-annotations.csv",
+                    "parent_path": "",
+                    "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                },
+                {
+                    "child_path": "predictions.csv",
+                    "parent_path": "",
+                    "parent_uuid": "{predict}"
+                }
+            ],
+            "metadata": {
+                "request_docker_image": "codalab/ubuntu:1.9"
+            },
+            "tag": "mrnet-test-eval"
+        },
+        "host": "https://worksheets.codalab.org",
+        "log_worksheet_uuid": "0xae2940e4b4b948dd994519941f3517d0",
+        "make_predictions_public": false,
+        "max_leaderboard_size": 10000,
+        "max_submissions_per_period": 5,
+        "max_submissions_total": 20,
+        "metadata": {
+            "name": "MRNet Competition Leaderboard"
+        },
+        "predict": {
+            "depth": 10,
+            "metadata": {},
+            "mimic": [
+                {
+                    "new": "0x81089c9e3dae4eb48bf2680c18d9d794",
+                    "old": "0x2ccbea10d7114bf28142d73a5fc8d398"
+                },
+                {
+                    "new": "0xcd032b322d624b7d8465abfc48e65d1e",
+                    "old": "0xbdbb1d4b0655429c9d5afaab1b5c86ec"
+                }
+            ],
+            "tag": "mrnet-test-predict"
+        },
+        "quota_period_seconds": 86400,
+        "refresh_period_seconds": 60,
+        "score_specs": [
+            {
+                "key": "/stdout:Average_AUROC",
+                "name": "average_auroc"
+            },
+            {
+                "key": "/stdout:Abnormal_AUROC",
+                "name": "abnormal_auroc"
+            },
+            {
+                "key": "/stdout:ACL_AUROC",
+                "name": "acl_auroc"
+            },
+            {
+                "key": "/stdout:Meniscus_AUROC",
+                "name": "meniscus_auroc"
+            }
+        ],
+        "submission_tag": "mrnet-submit"
+    },
+    "leaderboard": [
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xe89d0182cdd24a8b943dec21644938e1 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0x215403e0a5ccd576689463876e3ae9451ab0f095",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x7e196b945e8140a496e90a2fb494655b",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x7e196b945e8140a496e90a2fb494655b",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x7e196b945e8140a496e90a2fb494655b",
+                        "parent_name": "nicholasbien-predictions-mrnet-baseline-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xe89d0182cdd24a8b943dec21644938e1"
+                    }
+                ],
+                "id": "0x7e196b945e8140a496e90a2fb494655b",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1547092017,
+                    "data_size": 4246,
+                    "description": "{\"submit_id\": \"0x1f7470da80c54bf69672215489993cba\", \"predict_id\": \"0xe89d0182cdd24a8b943dec21644938e1\", \"submitter_id\": \"0x0437ecd567a149e89f89ace640598434\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1547094660,
+                    "name": "nicholasbien-predictions-mrnet-baseline-results",
+                    "remote": "vm-clws-prod-gpuworker-2",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1547094533,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 14.6424019337
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x7e196b945e8140a496e90a2fb494655b"
+            },
+            "scores": {
+                "abnormal_auroc": 0.9393939393939393,
+                "acl_auroc": 0.9669076751946607,
+                "average_auroc": 0.9171357625195222,
+                "meniscus_auroc": 0.8451056729699666
+            },
+            "submission": {
+                "created": 1547072624,
+                "description": "mrnet-baseline (single model) (Stanford University)",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "nicholasbien"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x8cb26fff1819431cb7e4df5f71007eb7 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0x4a4d01f3357f4c3663e5bac99abbd15f234002fc",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x01db5637187e44868c46cbfcd0a614ba",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x01db5637187e44868c46cbfcd0a614ba",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x01db5637187e44868c46cbfcd0a614ba",
+                        "parent_name": "JessicaWang-predictions-dc_baseline-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x8cb26fff1819431cb7e4df5f71007eb7"
+                    }
+                ],
+                "id": "0x01db5637187e44868c46cbfcd0a614ba",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1559076244,
+                    "data_size": 4247,
+                    "description": "{\"submit_id\": \"0x29b52913cf484dd982249f02bdf3710b\", \"predict_id\": \"0x8cb26fff1819431cb7e4df5f71007eb7\", \"submitter_id\": \"0x5e295af5238f47fea9fcb8614ec662df\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1559077998,
+                    "name": "JessicaWang-predictions-dc_baseline-results",
+                    "remote": "vm-clws-prod-gpuworker-9",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1559077966,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 27.3044998646
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x01db5637187e44868c46cbfcd0a614ba"
+            },
+            "scores": {
+                "abnormal_auroc": 0.9547859547859548,
+                "acl_auroc": 0.9371523915461624,
+                "average_auroc": 0.9107721814432975,
+                "meniscus_auroc": 0.8403781979977752
+            },
+            "submission": {
+                "created": 1559056171,
+                "description": "dc_baseline(single model)(Mason High)",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "JessicaWang"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xc534997477bc4ed999ef835c5902f079 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0xcef72c01cf0fa7cc2ef8f99f8d8c06a5366341c3",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x9f21c77f88924535a9f3cba65733ed59",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x9f21c77f88924535a9f3cba65733ed59",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x9f21c77f88924535a9f3cba65733ed59",
+                        "parent_name": "yashbhalgat-predictions-triplemrnet-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xc534997477bc4ed999ef835c5902f079"
+                    }
+                ],
+                "id": "0x9f21c77f88924535a9f3cba65733ed59",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1559198151,
+                    "data_size": 4247,
+                    "description": "{\"submit_id\": \"0xd229a405cad64ae18f5d8b2ebc1e3807\", \"predict_id\": \"0xc534997477bc4ed999ef835c5902f079\", \"submitter_id\": \"0x4ff3004152cb4acc8fe71c114fa6f340\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1559198478,
+                    "name": "yashbhalgat-predictions-triplemrnet-results",
+                    "remote": "vm-clws-prod-gpuworker-9",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1559198439,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 32.969835043
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x9f21c77f88924535a9f3cba65733ed59"
+            },
+            "scores": {
+                "abnormal_auroc": 0.9398749398749399,
+                "acl_auroc": 0.9543937708565072,
+                "average_auroc": 0.9036698446227552,
+                "meniscus_auroc": 0.8167408231368186
+            },
+            "submission": {
+                "created": 1559152765,
+                "description": "Triple-MRNet (single model) (Independent Researcher) https://github.com/yashbhalgat/MRNet-Competition",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "yashbhalgat"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xba0c6b3bbd234d7d85857592bac8f9d6 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0x369365ce59a5665d696a1eec75c4d4a4d2cf5949",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x0fcf5cec80ed4bb8999a720a897809b1",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x0fcf5cec80ed4bb8999a720a897809b1",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x0fcf5cec80ed4bb8999a720a897809b1",
+                        "parent_name": "ivanleung2015-predictions-IL_baseline-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xba0c6b3bbd234d7d85857592bac8f9d6"
+                    }
+                ],
+                "id": "0x0fcf5cec80ed4bb8999a720a897809b1",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1556483731,
+                    "data_size": 4245,
+                    "description": "{\"submit_id\": \"0x423878da5cc84085a14dc633bdcd20e7\", \"predict_id\": \"0xba0c6b3bbd234d7d85857592bac8f9d6\", \"submitter_id\": \"0x8811115caca549bbadd967ed96eda2b4\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1556499002,
+                    "name": "ivanleung2015-predictions-IL_baseline-results",
+                    "remote": "vm-clws-prod-gpuworker-12",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1556498981,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 14.6920249462
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x0fcf5cec80ed4bb8999a720a897809b1"
+            },
+            "scores": {
+                "abnormal_auroc": 0.9316979316979317,
+                "acl_auroc": 0.9146273637374861,
+                "average_auroc": 0.8996464370027587,
+                "meniscus_auroc": 0.8526140155728587
+            },
+            "submission": {
+                "created": 1556353408,
+                "description": "IL_baseline (single model) (Stanford Alum)",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "ivanleung2015"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x9c51b48156d947bfba4356f1006e6a03 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0x3131bf80d7d623faaff04950caaa916ee0f4a5e3",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x92f3f48222cd4090b4b4995a0cff8864",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x92f3f48222cd4090b4b4995a0cff8864",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x92f3f48222cd4090b4b4995a0cff8864",
+                        "parent_name": "maxwelltsai-predictions-MagNet-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x9c51b48156d947bfba4356f1006e6a03"
+                    }
+                ],
+                "id": "0x92f3f48222cd4090b4b4995a0cff8864",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1572990589,
+                    "data_size": 4243,
+                    "description": "{\"submit_id\": \"0xcd624655abf545a186e8ec9befbd5898\", \"predict_id\": \"0x9c51b48156d947bfba4356f1006e6a03\", \"submitter_id\": \"0xcd1c1ad8cd5d40df9ebe95ff63051cab\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1572992633,
+                    "name": "maxwelltsai-predictions-MagNet-results",
+                    "remote": "vm-clws-prod-gpuworker-1",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1572992549,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 3.4766671657562256,
+                    "time_system": 0.0,
+                    "time_user": 0.0
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0x92f3f48222cd4090b4b4995a0cff8864"
+            },
+            "scores": {
+                "abnormal_auroc": 0.91005291005291,
+                "acl_auroc": 0.8623470522803115,
+                "average_auroc": 0.8595244961577925,
+                "meniscus_auroc": 0.8061735261401558
+            },
+            "submission": {
+                "created": 1572558363,
+                "description": "MagNet (single model) TAU - Sheba Medical Center",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "maxwelltsai"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x1b9ad78a2cda4454afc479c4ee97516c \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-cpus 1 --request-memory 2g",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": "0xfa82d298596f906d6235455ce5df53803f52e6e7",
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0xa84c0e6547f7421f85b3a1caacf7b086",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0xa84c0e6547f7421f85b3a1caacf7b086",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0xa84c0e6547f7421f85b3a1caacf7b086",
+                        "parent_name": "mdass-predictions-prednet-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x1b9ad78a2cda4454afc479c4ee97516c"
+                    }
+                ],
+                "id": "0xa84c0e6547f7421f85b3a1caacf7b086",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1575153856,
+                    "data_size": 4247,
+                    "description": "{\"submit_id\": \"0x137f141ed3aa469e8fe9d51bd07523e1\", \"predict_id\": \"0x1b9ad78a2cda4454afc479c4ee97516c\", \"submitter_id\": \"0x5ca2889e39994890aa3d8696d25d3c19\"}",
+                    "docker_image": "codalab/ubuntu@sha256:a8369aaa7afdb4d242104d85aa660c034a7bf89e438963bf73ba197fe3731be0",
+                    "exitcode": 0,
+                    "last_updated": 1575156332,
+                    "name": "mdass-predictions-prednet-results",
+                    "remote": "vm-clws-prod-gpuworker-2",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "run_status": "Finished",
+                    "started": 1575156258,
+                    "tags": [
+                        "mrnet-test-eval"
+                    ],
+                    "time": 3.6232094764709473,
+                    "time_system": 0.0,
+                    "time_user": 0.0
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "ready",
+                "uuid": "0xa84c0e6547f7421f85b3a1caacf7b086"
+            },
+            "scores": {
+                "abnormal_auroc": 0.9201539201539202,
+                "acl_auroc": 0.860400444938821,
+                "average_auroc": 0.8366586482085184,
+                "meniscus_auroc": 0.7294215795328142
+            },
+            "submission": {
+                "created": 1574918870,
+                "description": "MRPredNet (single) (Anonymous)",
+                "num_period_submissions": 1,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "mdass"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x1b4b01dce9b3426a8c1e0e807c13aa99 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0xc3aecf1c92bc4ebd8c8f8c28f1b4aea8",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0xc3aecf1c92bc4ebd8c8f8c28f1b4aea8",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0xc3aecf1c92bc4ebd8c8f8c28f1b4aea8",
+                        "parent_name": "Andrewliu-predictions-axial-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x1b4b01dce9b3426a8c1e0e807c13aa99"
+                    }
+                ],
+                "id": "0xc3aecf1c92bc4ebd8c8f8c28f1b4aea8",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005846,
+                    "description": "{\"submit_id\": \"0x5e81a99982c04063aeb04080f69b7651\", \"predict_id\": \"0x1b4b01dce9b3426a8c1e0e807c13aa99\", \"submitter_id\": \"0x1d86040b50ea433198d372c5179abe77\"}",
+                    "failure_message": " Parent bundles failed: 0x1b4b01dce9b3426a8c1e0e807c13aa99 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "Andrewliu-predictions-axial-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0xc3aecf1c92bc4ebd8c8f8c28f1b4aea8"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1563161457,
+                "description": "base-mrnet-a(single model) (First Class)",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "Andrewliu"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x0ed315d465144ef6bb154f0e7eefc0cc \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x0cbf87f6f2a847c796bcb749c2747c94",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x0cbf87f6f2a847c796bcb749c2747c94",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x0cbf87f6f2a847c796bcb749c2747c94",
+                        "parent_name": "smiel-predictions-mrnet-transfer-and-attend-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x0ed315d465144ef6bb154f0e7eefc0cc"
+                    }
+                ],
+                "id": "0x0cbf87f6f2a847c796bcb749c2747c94",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005837,
+                    "description": "{\"submit_id\": \"0x1be1a3fd29cc4d7891791e772b272eed\", \"predict_id\": \"0x0ed315d465144ef6bb154f0e7eefc0cc\", \"submitter_id\": \"0x0537660be6e7452cb38502d0bffa2e62\"}",
+                    "failure_message": " Parent bundles failed: 0x0ed315d465144ef6bb154f0e7eefc0cc (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "smiel-predictions-mrnet-transfer-and-attend-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0x0cbf87f6f2a847c796bcb749c2747c94"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1566498676,
+                "description": "{TransferAndAttend} (ensemble) (Independent Researcher) https://github.com/FragLegs/mrnet",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "smiel"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x19860b1d8dcb4f3bb5ccce01f1fdff62 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0xe4071d14be394449af0dda93cd09c71e",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0xe4071d14be394449af0dda93cd09c71e",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0xe4071d14be394449af0dda93cd09c71e",
+                        "parent_name": "harsh-predictions-machine-baseline-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x19860b1d8dcb4f3bb5ccce01f1fdff62"
+                    }
+                ],
+                "id": "0xe4071d14be394449af0dda93cd09c71e",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005877,
+                    "description": "{\"submit_id\": \"0xe8e5b581deb844ff81f00a33fd298314\", \"predict_id\": \"0x19860b1d8dcb4f3bb5ccce01f1fdff62\", \"submitter_id\": \"0xf932fd141253457f8259354a4bac7a70\"}",
+                    "failure_message": " Parent bundles failed: 0x19860b1d8dcb4f3bb5ccce01f1fdff62 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "harsh-predictions-machine-baseline-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0xe4071d14be394449af0dda93cd09c71e"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1559204251,
+                "description": "Machine Baseline (Single-model) (Machine.ai)",
+                "num_period_submissions": 0,
+                "num_total_submissions": 2,
+                "public": true,
+                "user_name": "harsh"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x875d7355da704046924c6d5614583ca2 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x1431dd7ec22a4de1a25f489e0797a9ef",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x1431dd7ec22a4de1a25f489e0797a9ef",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x1431dd7ec22a4de1a25f489e0797a9ef",
+                        "parent_name": "harsh-predictions-basemodel-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x875d7355da704046924c6d5614583ca2"
+                    }
+                ],
+                "id": "0x1431dd7ec22a4de1a25f489e0797a9ef",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005814,
+                    "description": "{\"submit_id\": \"0xaa870373bb2549f7b5f49ac9bdb39c2c\", \"predict_id\": \"0x875d7355da704046924c6d5614583ca2\", \"submitter_id\": \"0xf932fd141253457f8259354a4bac7a70\"}",
+                    "failure_message": " Parent bundles failed: 0x875d7355da704046924c6d5614583ca2 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "harsh-predictions-basemodel-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0x1431dd7ec22a4de1a25f489e0797a9ef"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1560716387,
+                "description": "basemodel (single) Machine.ai",
+                "num_period_submissions": 0,
+                "num_total_submissions": 2,
+                "public": true,
+                "user_name": "harsh"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xc1e086b033f04298b4f82ca390fb4901 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x9988dabc351d4209b123cec6bbdd4894",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x9988dabc351d4209b123cec6bbdd4894",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x9988dabc351d4209b123cec6bbdd4894",
+                        "parent_name": "yspan-predictions-three-view-cooperation-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xc1e086b033f04298b4f82ca390fb4901"
+                    }
+                ],
+                "id": "0x9988dabc351d4209b123cec6bbdd4894",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005823,
+                    "description": "{\"submit_id\": \"0xb7b072eca73942e98eb3a519fc837f49\", \"predict_id\": \"0xc1e086b033f04298b4f82ca390fb4901\", \"submitter_id\": \"0xbcfe174d88c44b26bdae9953a3503a9a\"}",
+                    "failure_message": " Parent bundles failed: 0xc1e086b033f04298b4f82ca390fb4901 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "yspan-predictions-three-view-cooperation-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0x9988dabc351d4209b123cec6bbdd4894"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1560475962,
+                "description": "Three-view-cooperation -single-NWPU",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "yspan"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0x7151b592b0394966b04a7d6f1dc62616 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x70304b904b974b6e86bcf6bef5f739d1",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x70304b904b974b6e86bcf6bef5f739d1",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x70304b904b974b6e86bcf6bef5f739d1",
+                        "parent_name": "ML_Rology-predictions-MRNET_1-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0x7151b592b0394966b04a7d6f1dc62616"
+                    }
+                ],
+                "id": "0x70304b904b974b6e86bcf6bef5f739d1",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005805,
+                    "description": "{\"submit_id\": \"0x30f4346626bf4397a71e8cab60373c39\", \"predict_id\": \"0x7151b592b0394966b04a7d6f1dc62616\", \"submitter_id\": \"0xca2cf5aaf79e418b93d7667e644528c3\"}",
+                    "failure_message": " Parent bundles failed: 0x7151b592b0394966b04a7d6f1dc62616 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "ML_Rology-predictions-MRNET_1-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0x70304b904b974b6e86bcf6bef5f739d1"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1566822945,
+                "description": "Alexnet_9(ensemble) Rology http://www.rology.net",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "ML_Rology"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xf8ed29a18c5740f3af2c5345bdada7c3 \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0xf6547d70359b47f3822a63e70fd8208b",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0xf6547d70359b47f3822a63e70fd8208b",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0xf6547d70359b47f3822a63e70fd8208b",
+                        "parent_name": "misaogura-predictions-mrnet-baseline-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xf8ed29a18c5740f3af2c5345bdada7c3"
+                    }
+                ],
+                "id": "0xf6547d70359b47f3822a63e70fd8208b",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005855,
+                    "description": "{\"submit_id\": \"0xbf13fe37eaf74398b41997c4fb0ea74e\", \"predict_id\": \"0xf8ed29a18c5740f3af2c5345bdada7c3\", \"submitter_id\": \"0x50c04aaf2e9742f0873f3dd65b67fb2f\"}",
+                    "failure_message": " Parent bundles failed: 0xf8ed29a18c5740f3af2c5345bdada7c3 (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "misaogura-predictions-mrnet-baseline-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0xf6547d70359b47f3822a63e70fd8208b"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1561718084,
+                "description": "mo_mrnet_baseline (single model) (Independent Researcher) https://github.com/MisaOgura/MRNet",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "misaogura"
+            }
+        },
+        {
+            "bundle": {
+                "args": "run evaluate.py:0x64251554c3804ccdb5c87a8545b607b0 test-annotations.csv:0xe2b748c379fc4af29bf25b96ecd4bfa9 predictions.csv:0xb744c7e863a94d6d9c27aa9db23d902d \"python evaluate.py test-annotations.csv predictions.csv\" --request-docker-image codalab/ubuntu:1.9 --request-memory 2g --request-cpus 1",
+                "bundle_type": "run",
+                "command": "python evaluate.py test-annotations.csv predictions.csv",
+                "data_hash": null,
+                "dependencies": [
+                    {
+                        "child_path": "evaluate.py",
+                        "child_uuid": "0x9b6ad65c6eaa4963ad4d1dbe99a4e9b8",
+                        "parent_name": "evaluate-v1.0.py",
+                        "parent_path": "",
+                        "parent_uuid": "0x64251554c3804ccdb5c87a8545b607b0"
+                    },
+                    {
+                        "child_path": "test-annotations.csv",
+                        "child_uuid": "0x9b6ad65c6eaa4963ad4d1dbe99a4e9b8",
+                        "parent_name": "test-annotations.csv",
+                        "parent_path": "",
+                        "parent_uuid": "0xe2b748c379fc4af29bf25b96ecd4bfa9"
+                    },
+                    {
+                        "child_path": "predictions.csv",
+                        "child_uuid": "0x9b6ad65c6eaa4963ad4d1dbe99a4e9b8",
+                        "parent_name": "guchile-predictions-MRfia10-predict",
+                        "parent_path": "",
+                        "parent_uuid": "0xb744c7e863a94d6d9c27aa9db23d902d"
+                    }
+                ],
+                "id": "0x9b6ad65c6eaa4963ad4d1dbe99a4e9b8",
+                "is_anonymous": false,
+                "metadata": {
+                    "actions": [],
+                    "allow_failed_dependencies": false,
+                    "created": 1573005868,
+                    "description": "{\"submit_id\": \"0x000aec18ab574463b78c17a964282790\", \"predict_id\": \"0xb744c7e863a94d6d9c27aa9db23d902d\", \"submitter_id\": \"0x7cc6cb75141143089aa6a6b96b49b318\"}",
+                    "failure_message": " Parent bundles failed: 0xb744c7e863a94d6d9c27aa9db23d902d (Please use the --allow-failed-dependencies flag to depend on results fo failed or killed bundles)",
+                    "name": "guchile-predictions-MRfia10-results",
+                    "request_cpus": 1,
+                    "request_disk": "",
+                    "request_docker_image": "codalab/ubuntu:1.9",
+                    "request_gpus": 0,
+                    "request_memory": "2g",
+                    "request_network": false,
+                    "request_priority": 0,
+                    "request_queue": "",
+                    "request_time": "",
+                    "tags": [
+                        "mrnet-test-eval"
+                    ]
+                },
+                "owner": {
+                    "id": "0x0437ecd567a149e89f89ace640598434",
+                    "type": "users"
+                },
+                "permission": 2,
+                "permission_spec": "all",
+                "state": "failed",
+                "uuid": "0x9b6ad65c6eaa4963ad4d1dbe99a4e9b8"
+            },
+            "scores": {
+                "abnormal_auroc": null,
+                "acl_auroc": null,
+                "average_auroc": null,
+                "meniscus_auroc": null
+            },
+            "submission": {
+                "created": 1570671402,
+                "description": "MRfia10 ensemble FIA",
+                "num_period_submissions": 0,
+                "num_total_submissions": 1,
+                "public": true,
+                "user_name": "guchile"
+            }
+        }
+    ],
+    "updated": 1575156410.893149
+}

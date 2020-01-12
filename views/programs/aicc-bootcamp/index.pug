@@ -1,0 +1,85 @@
+extends ../../layout
+
+block title
+  title AI For Climate Change Bootcamp 
+
+block description
+  meta(name='description', content='The AI for Climate Change Bootcamp provides Stanford students an opportunity to do cutting-edge research at the intersection of AI and climate change.')
+
+block extrascripts
+include ../../includes/profile
+include ../../includes/bootcamp_alumni
+
+block content
+  section#header
+    .container
+      .row
+        .col-lg-9
+          img#aihc_headline(src="/programs/aicc-bootcamp.svg")
+  section.gray
+    .container
+      .row
+        .col-sm-7.col-sm-push-4
+          h3 The AI for Climate Change Bootcamp provides Stanford students an opportunity to do cutting-edge research at the intersection of AI and climate change. Students receive training from PhD students and bootcamp faculty to do interdiscplinary research on high impact problems.
+          p The applications for the Winter+Spring bootcamp are now open.
+          a.btn.btn-lg.btn-default(href="https://forms.gle/67ZMY3vbcTVrx6on9") Apply Now
+        .col-sm-4.col-sm-pull-7
+          img(src='/img/aicc-bootcamp.jpg', width="90%")
+  section
+    .container
+      .row
+        .col-sm-4
+          h3 Teaching Team
+          +dp('Jeremy Irvin', 'phd', false, 'big')
+          +dp('Sharon Zhou', 'phd', false, 'big')
+          +dp('Hao Sheng', 'phd', false, 'big')
+          +dp('Pranav Rajpurkar', 'phd', false, 'big')
+          +dp('Andrew Ng', 'prof', false, 'big')
+          +dp('Rob Jackson', 'prof', false, 'big')
+          +dp('Ram Rajagopal', 'prof', false, 'big')
+          +dp('Sara Knox', 'prof', false, 'big')
+          +dp('Gavin McNicol', 'postdoc', false, 'big')
+          +dp('Etienne Fluet-Chouinard', 'postdoc', false, 'big')
+          +dp('Zhecheng Wang', 'phd', false, 'big')
+          +dp('Kyle Story', 'dl', false, 'big')
+          +dp('Rose Rustowicz', 'dl', false, 'big')
+          +dp('Cooper Elsworth', 'dl', false, 'big')
+        .col-sm-8
+          h2 Program
+          p 
+            | The AICC bootcamp is an intense two-quarter program where students work on high-impact research problems at the intersection of AI and climate change (earth system science and energy). Students work closely with PhD students in Professor Andrew Ng's lab, with faculty in the 
+            a(href="https://jacksonlab.stanford.edu/") Department of Earth System Science 
+            | and the 
+            a(href="http://web.stanford.edu/~ramr/index.html") Department of Civil and Environmental Engineering, 
+            | and with scientists from 
+            a(href="https://www.descarteslabs.com/") Descartes Labs.
+          .applications
+            h2 Applications
+            p Students with a background in artificial intelligence are encouraged to apply. Applications for the 2019 Winter+Spring bootcamp have now opened.
+            ul
+              li Regular Applications due Dec 30th, 2019 at 11:59p PST.
+              li Late Applications due Jan 8th, 2020 at 11:59p PST. Apply early to give yourself enough time to prepare for the interview.
+              li Rolling interviews and selections until Jan 9th, 2020.
+              li Bootcamp starts Jan 10th, 2020.
+            h3 Prerequisites and Commitment
+            p This bootcamp is suited for students who have taken machine learning and software engineering courses. Students will be able to apply and sharpen these skills, developing machine learning solutions to challenging problems with the mentorship of CS PhD students and in collaboration with earth system science and civil and environmental engineering faculty. Students have the opportunity to take a deep dive into climate change and co-author a research paper. We expect students to have:
+            ul
+              li Taken machine learning courses (CS229/CS230/CS224N/CS231N or equivalent).
+              li Proficiency in software engineering (CS107 or equivalent), and have done Python programming.
+              li The bootcamp as their primary academic engagement (30-40 hours per week in lab) outside of 1 or 2 courses. We encourage students to sign up for research credits (CS 199, CS 399 etc).
+  section.gray
+    .container
+      .row
+        .col-sm-8
+          .row
+            .col-sm-12
+              h2 Past Bootcamp Cohorts
+              +alumni('ccfall2019', false)
+              +alumni('ccsummer2019', false)
+              +alumni('ccspring2019', false)
+  section.bg-primary
+    .container
+      .row
+        .col-md-8
+          h2 We invite you to join the AI revolution in climate change
+          a.btn.btn-lg.btn-default(href="https://forms.gle/67ZMY3vbcTVrx6on9") Apply Now

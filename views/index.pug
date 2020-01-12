@@ -1,0 +1,334 @@
+extends layout
+
+block title
+  title Stanford Machine Learning Group
+
+block description
+  meta(name='description', content='Our mission is to significantly improve people\'s lives through our work in Artificial Intelligence')
+
+include includes/profile
+
+block content
+  section#header
+    .container
+      .row
+        .col-lg-9
+          h1#page-title Stanford Machine Learning Group
+          h2 Our mission is to significantly improve people's lives through our work in Artificial Intelligence
+  section#projects.features
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h1 Projects
+            p.text-muted We work on developing AI solutions for a variety of high-impact problems
+            hr
+      .row
+        .col-md-3
+          .feature-item
+            i.fa.fa-location-arrow
+            h2 NGBoost
+            p.text-muted
+              | Probabilistic Prediction with Gradient Boosting
+            a.btn.btn-default(href="/projects/ngboost") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-user-md.text-primary
+            h2 CheXpert
+            p.text-muted
+              | A Large Chest X-Ray Dataset And Competition
+            a.btn.btn-default(href="/competitions/chexpert") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-heartbeat.text-primary
+            h2 ECG Arrhythmia
+            p.text-muted
+              | Cardiologist-level arrythmia detection from ECG signals.
+            a.btn.btn-default(href="/projects/ecg2") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-medkit.text-primary
+            h2 MRNet
+            p.text-muted
+              | Diagnosis of abnormalities from Knee MRs
+            a.btn.btn-default(href="/projects/mrnet") Project Webpage
+            a.btn.btn-default(href="/competitions/mrnet") Dataset Webpage
+      .row
+        .col-md-3
+          .feature-item
+            i.fa.fa-heartbeat.text-primary
+            h2 PPG Arrhythmia
+            p.text-muted
+              | Arrythmia detection from ambulatory free-living PPG signals.
+            a.btn.btn-default(href="/projects/ppg") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-user-md.text-primary
+            h2 CheXNeXt
+            p.text-muted
+              | Chest radiograph diagnosis of multiple pathologies
+              | and comparison to practicing radiologists.
+            a.btn.btn-default(href="/projects/chexnext") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-user-md.text-primary
+            h2 MURA
+            p.text-muted
+              | Introducing a large dataset for abnormality detection from bone x-rays.
+            a.btn.btn-default(href="/competitions/mura") Project Webpage
+        .col-md-3
+          .feature-item
+            i.fa.fa-hourglass-half.text-primary
+            h2 Countdown Regression
+            p.text-muted
+              | New approach to probabilistic time to event predictions.
+            a.btn.btn-default(href="/projects/countdown-regression") Project Webpage
+      .row
+        .col-md-4
+          .feature-item
+            i.fa.fa-user-md.text-primary
+            h2 CheXNet
+            p.text-muted
+              | Radiologist-level pneumonia detection from chest X-rays.
+            a.btn.btn-default(href="/projects/chexnet") Project Webpage
+        .col-md-4
+          .feature-item
+            i.fa.fa-medkit.text-primary
+            h2 Palliative Care
+            p.text-muted
+              | Using Electronic Health Record Data to direct palliative care resources.
+            a.btn.btn-default(href="/projects/improving-palliative-care") Project Webpage
+        .col-md-4
+          .feature-item
+            i.fa.fa-graduation-cap.text-primary
+            h2 Education
+            p.text-muted
+              | Designing natural language models to detect writing errors and provide feedback.
+            a.btn.btn-default(href="http://crio.stanford.edu") Project Webpage
+
+  section.gray.features#people
+     .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h1 People
+            p.text-muted Current Members
+      .row
+        .col-md-10.col-md-offset-1
+          +dp('Andrew Ng', 'prof')
+          +dp('Swati Dube Batra', 'Program Manager')
+          //- PhD students, alphabetical order
+          +dp('Anand Avati', 'phd')
+          +dp('Anuj Pareek', 'phd')
+          +dp('Ashwin Agrawal', 'phd')
+          +dp('Awni Hannun', 'phd')
+          +dp('Hao Sheng', 'phd')
+          +dp('Pranav Rajpurkar', 'phd')
+          +dp('Ziang Xie', 'phd')
+          +dp('Sharon Zhou', 'phd')
+          +dp('Jeremy Irvin', 'phd')
+          //- Masters students, alphabetical order
+          +dp('Allison Park', 'ms')
+          +dp('Amirhossein Kiani', 'ms')
+          +dp('Anirudh Joshi', 'ms')
+          +dp('Chris Chute', 'ms')
+          +dp('Chris Lin', 'ms')
+          +dp('Cooper Raterink', 'ms')
+          +dp('Emma Chen','ms')
+          +dp('Fred Lu', 'ms')
+          +dp('Guillaume Genthial', 'ms')
+          +dp('Henrik Marklund', 'ms')
+          +dp('Hershel Mehta', 'ms')
+          +dp('Jabs Aljubran', 'ms')
+          +dp('Jessica Wetstone', 'ms')
+          +dp('Jingbo Yang', 'ms')
+          +dp('Jiyao Yuan', 'ms')
+          +dp('Jon Braatz', 'ms')
+          +dp('Joseph Lee', 'ms')
+          +dp('Kaushik Ram Sadagopan', 'ms')
+          +dp('Kelly Shen', 'ms')
+          +dp('Max Drach', 'ms')
+          +dp('Maxime Voisin', 'ms')
+          +dp('Meng Zhang', 'ms')
+          +dp('Nathan Dass', 'ms')
+          +dp('Neel Ramachandran', 'ms')
+          +dp('Neethu Renjith', 'ms')
+          +dp('Nicholas Bien', 'ms')
+          +dp('Nick Phillips', 'ms')
+          +dp('Nishit Asnani', 'ms')
+          +dp('Rui Aguiar', 'ms')
+          +dp('Silviana Ciurea Ilcus', 'ms')
+          +dp('Sonja Johnson', 'ms')
+          +dp('Soumya Patro', 'ms')
+          +dp('Suvadip Paul', 'ms')
+          +dp('Tony Duan', 'ms')
+          +dp('Will Deaderick', 'ms')
+          +dp('Yancheng Li', 'ms')
+          +dp('Yifan Yu', 'ms')
+          //- Law Students
+          +dp('Bryan Casey', 'jd')
+          +dp('Zach Harned', 'jd')
+          +dp('Dan Beksha', 'jd')
+          +dp('James Rathmell', 'jd')
+          //- Bachelors students, alphabetical order
+          +dp('Alex Wang', 'bs')
+          +dp('Amit Schechter', 'bs')
+          +dp('Andrew Huang', 'bs')
+          +dp('Andrew Kondrich', 'bs')
+          +dp('Anirudh Jain', 'bs')
+          +dp('Behzad Haghgoo', 'bs')
+          +dp('Ben Cohen-Wang', 'bs')
+          +dp('Bora Uyumazturk', 'bs')
+          +dp('Chris Wang', 'bs')
+          +dp('Eric Zelikman','bs')
+          +dp('Erik Jones', 'bs')
+          +dp('Eva Zhang', 'bs')
+          +dp('Gordon Chi', 'bs')
+          +dp('Hari Sowrirajan', 'bs')
+          +dp('Jason Li', 'bs')
+          +dp('Joe Lou', 'bs')
+          +dp('Mark Sabini', 'bs')
+          +dp('Mason Swofford', 'bs')
+          +dp('Matthew Sun', 'bs')
+          +dp('Michael Bereket', 'bs')
+          +dp('Michael Ko', 'bs')
+          +dp('Minh Phu', 'bs')
+          +dp('Nathan Dalal', 'bs')
+          +dp('Nidhi Manoj', 'bs')
+          +dp('Norah Borus', 'bs')
+          +dp('Phil Chen', 'bs')
+          +dp('Philip Hwang', 'bs')
+          +dp('Prathik Naidu', 'bs')
+          +dp('Robin Cheong', 'bs')
+          +dp('Shubhang Desai', 'bs')
+          +dp('Stanley Xie', 'bs')
+          +dp('Tanay Kothari', 'bs')
+          +dp('Thao Nguyen', 'bs')
+          +dp('Vincent Liu', 'bs')
+          +dp('Vinjai Vale', 'bs')
+      .row.hidden-sm
+        .col-md-offset-1.col-md-10.text-center
+            .section-heading
+              p.text-muted Past PhD Members
+            ul.list-inline.list-unstyled
+              li
+                p.small Adam Coates
+              li
+                p.small Alan Asbeck
+              li
+                p.small Andrew Maas
+              li
+                p.small Andrew Saxe
+              li
+                p.small Ashutosh Saxena
+              li
+                p.small Brody Huval
+              //-li
+                h4 Dan Zylberglejd
+              li
+                p.small Honglak Lee
+              li
+                p.small Ilya Sutskever
+              li
+                p.small Jiquan Ngiam
+              li
+                p.small Morgan Quigley
+              li
+                p.small Pieter Abbeel
+              li
+                p.small Quoc Le
+              li
+                p.small Rajat Raina
+              li
+                p.small Richard Socher
+              li
+                p.small Rion Snow
+              li
+                p.small Sameep Tandon
+              //-li
+                h4 Sudnya Diamos
+              li
+                p.small Tao Wang
+              li
+                p.small Zico Kolter
+      .row#bootcamp
+        .col-md-12.text-center
+            .section-heading
+              h2 Bootcamps
+      .row
+        .col-md-6
+            a(href="/programs/aihc-bootcamp")
+              img.programHeadline(src="/programs/aihc-bootcamp.svg")
+        .col-md-6
+            a(href="/programs/aicc-bootcamp")
+              img.programHeadline(src="/programs/aicc-bootcamp.svg")
+  section#volunteering
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h1 Volunteer with us
+      .row
+        .col-md-10.col-md-offset-1
+          h2
+            | By working with our group, you will:
+          ul
+            li
+              | Work on important problems in areas such as healthcare and climate change, using AI.
+            li
+              | Build and deploy machine learning / deep learning algorithms and applications.
+          h2 Values
+          p
+            | Here are some values that we would like to see in you:
+          ul
+            li
+              strong Hard work
+              | : We expect you to have a strong work ethic. Many of us work evenings and weekends because we love our work and are passionate about the AI mission. We also value velocity, and like people that get things done quickly.
+            li
+              strong Flexibility
+              | : You should be willing to dive into different facets of a project. For example, besides developing machine learning algorithms, you may also need to work on data acquisition, conduct user interviews, or do frontend engineering. This may also require going outside your comfort zone, and learning to do new tasks in which you’re not an expert.
+            li
+              strong Learning
+              | : You should have a strong growth mindset, and want to learn continuously. This can involve reading books, taking coursework, talking to experts, or re-implementing research papers. We will also prioritize your learning and help point you in the right direction; but you need to put in the work to take advantage of this.
+            li
+              strong Teamwork
+              | : We work together in small teams. You are expected to support and collaborate with others; in turn you will also receive support from your teammates.
+          h2 Prerequisites
+          p
+            | You should have a strong ML background, or a strong software engineering background.
+          ul
+            li
+              strong ML/AI background
+              | : You have a solid background in probability and linear algebra, and have done well in AI/ML coursework. For example, Stanford students should have taken CS229 before applying. Previous ML/AI research experience would be a plus but is not required.
+            li
+              strong Software engineering background
+              | : We also encourage engineers without much AI background who are interested in developing ML applications to apply. Applicants should have made significant contributions to software projects in the past, for example through developing software systems at a company or through significant open source contributions.
+          h2
+            | Applying
+          p  Please email us at ml-apply@cs.stanford.edu with your resume (and your transcript if you're a student) and two paragraphs on why you’d like to get involved. We expect that volunteers will commit 25 hours a week as a minimum. Due to a high number of applicants we may be unable to respond to individual emails.
+          h3
+            | Stanford Students
+          ul
+            li
+              | Outside of coursework, we expect this to be your primary academic activity.
+              | As it takes time to familiarize oneself with a research project and to make significant contributions, we expect that students will be involved for at least two quarters, with a strong preference for those who can potentially stay involved for the full school year.
+          h3
+            | Non-Stanford student Volunteers
+          ul
+            li
+              | You must be authorized to work in the United States and able to work on the Stanford University campus. We are not able to sponsor visas nor take on volunteers that want to work remotely.
+            li
+              | Volunteers must be available for at least 12 weeks of research, with a strong preference for volunteers who can potentially stay involved for longer.
+          p We believe that having a diverse and inclusive team will help us to advance AI, for the betterment of human life. We value different viewpoints. All backgrounds, ideas, and perspectives are welcome.
+  section#contact.bg-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h1 Contact us
+      .row
+        .col-md-10.col-md-offset-1.text-center
+          h3
+            | If you're looking to partner or volunteer with us, contact us at
+          h2
+            code ml-apply@cs.stanford.edu
