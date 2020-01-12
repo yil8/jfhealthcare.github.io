@@ -1,12 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="608" height="328" viewBox="0 0 608 328">
+<svg xmlns="http://www.w3.org/2000/svg" width="708" height="328" viewBox="0 0 708 328">
   <defs>
     <style>
       .cls-1 {
-        font-size: 100px;
+        font-size: 125px;
         fill: #dde1e9;
+        text-anchor: middle;
         font-family: "Wawati SC";
       }
     </style>
   </defs>
-  <text id="object-CXR" class="cls-1" x="55.992" y="202.633">object-CXR</text>
+  <text id="object-CXR" class="cls-1" x="352.757" y="207.641"><tspan x="352.757">object-CXR</tspan></text>
 </svg>
