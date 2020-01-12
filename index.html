@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-12"><img id="title-image"
                          src="/competitions/chexpert/img/logo.svg">
-                    <h3 id="page-subtitle">Object-CXR challenge</h3>
+                    <h3 id="page-subtitle">A large dataset of chest X-rays and competition</h3>
                 </div>
             </div>
         </div>
@@ -81,6 +81,7 @@
                     <h2>Why object-CXR challenge?</h2>
                     <p> Analyzing chest X-rays is a common clinical approach for diagnosing pulmonary and heart diseases. However, foreign objects are occasionally presented on chest X-ray images, especially in rural and remote locations where standard filming guidances are not strictly followed. Foreign objects on chest X-rays may obscure pathological finds, thus increasing false negative diagnosis. They may also confuse junior radiologists from real pathological findings, e.g. buttons are visually similar to nodules on chest X-ray, thus increasing false positive diagnosis. Therefore, automatically detecting foreign objects on chest X-ray is important and may potentially improve overall diagnosis accuracy, e.g. by suggesting re-filming in the telemedicine setting.
 
+                        
                         We provide a large dataset of chest X-rays with strong annotations of foreign objects, and the competition for automatic detection of foreign objects. Specifically, 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects are provided. All the chest X-ray images were filmed in township hospitals in China and collected through our telemedicine platform. Foreign objects within the lung field of each chest X-ray are annotated with bounding boxes, ellipses or masks depending on the shape of the objects.
                         
                         Detecting foreign objects is particularly challenging for deep learning (DL) based systems, as specific types of objects presented in the test set may be rarely or never seen in the training set, thus posing a few-shot/zero-shot learning problem. We hope this open dataset and challenge could both help the development of automatic foreign objects detection system, and promote the general research of object detection on chest X-rays, as large scale chest X-ray datasets with strong annotations are limited to the best of our knowledge.</p>
@@ -100,7 +101,7 @@
                         <tr>
                             <td class="rank">1 <br></td>
                             <td><span class="date label label-default">Sep 01, 2019</span></td>
-                            <td style="word-break:break-word;">Hierarchical-Learning-V1 (ensemble)<em> Vingroup Big Data
+                            <td style="word-break:break-word;">Qitingshe<em> JF
                                     Institute </em><a class="link"
                                    href="https://arxiv.org/abs/1911.06475">https://arxiv.org/abs/1911.06475</a></td>
                             <td><b>0.930</b></td>
@@ -109,13 +110,13 @@
                         <tr>
                             <td class="rank">2 <br></td>
                             <td><span class="date label label-default">Oct 15, 2019</span></td>
-                            <td style="word-break:break-word;">Conditional-Training-LSR<em> ensemble </em></td>
+                            <td style="word-break:break-word;">Deadpoppy<em> ensemble </em></td>
                             <td>0.929</td>
                             <td>2.6</td>
                         </tr>
                     </table>
                     <h3>How can I participate?</h3>
-                    <p>CheXpert uses a hidden test set for official evaluation of models. Teams submit their executable
+                    <p>Object-CXR uses a hidden test set for official evaluation of models. Teams submit their executable
                         code on Codalab, which is then run on a test set that is not publicly readable. Such a setup
                         preserves the integrity of the test results.</p>
                     <p>Here's a tutorial walking you through official evaluation of your model. Once your model has been
