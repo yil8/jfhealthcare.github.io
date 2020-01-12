@@ -131,6 +131,40 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2>What is our baseline model?</h2>
+                    <p>We train models that take as input a single-view chest radiograph and output the probability of
+                        each of the 14 observations. When more than one view is available, the models output the maximum
+                        probability of the observations across the views.</p>
+                    <h3>Leveraging Uncertainty Labels</h3>
+                    <p> The training labels in the dataset for each observation are either 0 (negative), 1 (positive),
+                        or u (uncertain). We explore different approaches to using the uncertainty labels during the
+                        model training.</p>
+                    <ul>
+                        <li><b>U-Ignore</b>: We ignore the uncertain labels during training.</li>
+                        <li><b>U-Zeroes</b>: We map all instances of the uncertain label to 0.</li>
+                        <li><b>U-Ones</b>: We map all instances of the uncertain label to 1.</li>
+                        <li><b>U-SelfTrained</b>: We first train a model using the U-Ignore approach to convergence, and
+                            then use the model to make predictions that re-label each of the uncertainty labels with the
+                            probability prediction outputted by the model.</li>
+                        <li><b>U-MultiClass</b>: We treat the uncertainty label as its own class.</li>
+                    </ul>
+                    <p>We focus on the evaluation of 5 observations which we call the competition tasks, selected based
+                        of clinical importance and prevalence: (a) Atelectasis, (b) Cardiomegaly, (c) Consolidation, (d)
+                        Edema, and (e) Pleural Effusion.
+                        We compare the performance of the different uncertainty approaches on a validation set of 200
+                        studies on which the consensus of three radiologist annotations serves as ground truth. Our
+                        baseline model is selected based on the best performing approach on each competition tasks on
+                        the validation set: U-Ones for Atelectasis and Edema, U-MultiClass for Cardiomegaly and Pleural
+                        Effusion, and U-SelfTrained for Consolidation.</p>
+                </div>
+                <div class="col-md-5"><img src="/competitions/chexpert/img/figure1.png"></div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="row">
