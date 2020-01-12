@@ -56,7 +56,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display-->
             <div class="navbar-header"><a class="navbar-brand page-scroll"
-                   href="/">Stanford ML Group</a></div>
+                   href="/">JF HEALTHCARE</a></div>
             <!-- Collect the nav links, forms, and other content for toggling-->
         </div>
     </nav>
@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-12"><img id="title-image"
                          src="/competitions/chexpert/img/logo.svg">
-                    <h3 id="page-subtitle">A Large Chest X-Ray Dataset And Competition</h3>
+                    <h3 id="page-subtitle">Object-CXR challenge</h3>
                 </div>
             </div>
         </div>
@@ -74,20 +74,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>What is CheXpert?</h1>
-                    <p>CheXpert is a large dataset of chest X-rays and competition for automated chest x-ray
-                        interpretation, which features uncertainty labels and radiologist-labeled reference standard
-                        evaluation sets. </p><a class="btn btn-default"
+                    <h1>What is Object-CXR challenge?</h1>
+                    <p>Object-CXR is a large dataset of chest X-rays and competition for automated chest x-ray
+                        interpretation </p><a class="btn btn-default"
                        href="https://arxiv.org/abs/1901.07031">Read the Paper (Irvin & Rajpurkar et al.)</a>
-                    <h2>Why CheXpert?</h2>
-                    <p> Chest radiography is the most common imaging examination globally, critical for screening,
-                        diagnosis, and management of many life threatening diseases. Automated chest radiograph
-                        interpretation at the level of practicing radiologists could provide substantial benefit in many
-                        medical settings, from improved workflow prioritization and clinical decision support to
-                        large-scale screening and global population health initiatives.
-                        For progress in both development and validation of automated algorithms, we realized there was a
-                        need for a labeled dataset that (1) was large, (2) had strong reference standards, and (3)
-                        provided expert human performance metrics for comparison.</p>
+                    <h2>Why object-CXR challenge?</h2>
+                    <p> Analyzing chest X-rays is a common clinical approach for diagnosing pulmonary and heart diseases. However, foreign objects are occasionally presented on chest X-ray images, especially in rural and remote locations where standard filming guidances are not strictly followed. Foreign objects on chest X-rays may obscure pathological finds, thus increasing false negative diagnosis. They may also confuse junior radiologists from real pathological findings, e.g. buttons are visually similar to nodules on chest X-ray, thus increasing false positive diagnosis. Therefore, automatically detecting foreign objects on chest X-ray is important and may potentially improve overall diagnosis accuracy, e.g. by suggesting re-filming in the telemedicine setting.
+
+                        We provide a large dataset of chest X-rays with strong annotations of foreign objects, and the competition for automatic detection of foreign objects. Specifically, 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects are provided. All the chest X-ray images were filmed in township hospitals in China and collected through our telemedicine platform. Foreign objects within the lung field of each chest X-ray are annotated with bounding boxes, ellipses or masks depending on the shape of the objects.
+                        
+                        Detecting foreign objects is particularly challenging for deep learning (DL) based systems, as specific types of objects presented in the test set may be rarely or never seen in the training set, thus posing a few-shot/zero-shot learning problem. We hope this open dataset and challenge could both help the development of automatic foreign objects detection system, and promote the general research of object detection on chest X-rays, as large scale chest X-ray datasets with strong annotations are limited to the best of our knowledge.</p>
                 </div>
                 <div class="col-md-5">
                     <h2>Leaderboard</h2>
