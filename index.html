@@ -74,17 +74,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1>What is Object-CXR challenge?</h1>
-                    <p>Object-CXR is Automatic detection of  foreign objects on chest X-rays
-                        interpretation </p><a class="btn btn-default"
-                       href="https://arxiv.org/abs/1901.07031">Read the Paper (Irvin & Rajpurkar et al.)</a>
-                    <h2>Why object-CXR challenge?</h2>
-                    <p> Analyzing chest X-rays is a common clinical approach for diagnosing pulmonary and heart diseases. However, foreign objects are occasionally presented on chest X-ray images, especially in rural and remote locations where standard filming guidances are not strictly followed. Foreign objects on chest X-rays may obscure pathological finds, thus increasing false negative diagnosis. They may also confuse junior radiologists from real pathological findings, e.g. buttons are visually similar to nodules on chest X-ray, thus increasing false positive diagnosis. Therefore, automatically detecting foreign objects on chest X-ray is important and may potentially improve overall diagnosis accuracy, e.g. by suggesting re-filming in the telemedicine setting.
-
-                        
-                        We provide a large dataset of chest X-rays with strong annotations of foreign objects, and the competition for automatic detection of foreign objects. Specifically, 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects are provided. All the chest X-ray images were filmed in township hospitals in China and collected through our telemedicine platform. Foreign objects within the lung field of each chest X-ray are annotated with bounding boxes, ellipses or masks depending on the shape of the objects.
-                        
-                        Detecting foreign objects is particularly challenging for deep learning (DL) based systems, as specific types of objects presented in the test set may be rarely or never seen in the training set, thus posing a few-shot/zero-shot learning problem. We hope this open dataset and challenge could both help the development of automatic foreign objects detection system, and promote the general research of object detection on chest X-rays, as large scale chest X-ray datasets with strong annotations are limited to the best of our knowledge.</p>
+                    <h1>Introduction</h1>
+                    <p>Analyzing chest X-rays is a common clinical approach for diagnosing pulmonary and heart diseases. However, foreign objects are occasionally presented on chest X-ray images, especially in rural and remote locations where standard filming guidances are not strictly followed. Foreign objects on chest X-rays may obscure pathological finds, thus increasing false negative diagnosis. They may also confuse junior radiologists from real pathological findings, e.g. buttons are visually similar to nodules on chest X-ray, thus increasing false positive diagnosis. Therefore, automatically detecting foreign objects on chest X-ray is important and may potentially improve overall diagnosis accuracy, e.g. by suggesting re-filming in the telemedicine setting.
+                         </p><a class="btn btn-default"
+                       href="http://www.jfhealthcare.com/">View JF HEALTHCARE</a>
+                    <h2>Background</h2>
+                    <p> Detecting foreign objects is particularly challenging for deep learning (DL) based systems, as specific types of objects presented in the test set may be rarely or never seen in the training set, thus posing a few-shot/zero-shot learning problem. We hope this open dataset and challenge could both help the development of automatic foreign objects detection system, and promote the general research of object detection on chest X-rays, as large scale chest X-ray datasets with strong annotations are limited to the best of our knowledge.</p>
                 </div>
                 <div class="col-md-5">
                     <h2>Leaderboard</h2>
@@ -102,8 +97,7 @@
                             <td class="rank">1 <br></td>
                             <td><span class="date label label-default">Sep 01, 2019</span></td>
                             <td style="word-break:break-word;">Qitingshe<em> JF
-                                    Institute </em><a class="link"
-                                   href="https://arxiv.org/abs/1911.06475">https://arxiv.org/abs/1911.06475</a></td>
+                                    Institute </em></td>
                             <td><b>0.930</b></td>
                             <td>2.6</td>
                         </tr>
@@ -131,37 +125,24 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="gray">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h2>What is our baseline model?</h2>
-                    <p>We train models that take as input a single-view chest radiograph and output the probability of
-                        each of the 14 observations. When more than one view is available, the models output the maximum
-                        probability of the observations across the views.</p>
-                    <h3>Leveraging Uncertainty Labels</h3>
-                    <p> The training labels in the dataset for each observation are either 0 (negative), 1 (positive),
-                        or u (uncertain). We explore different approaches to using the uncertainty labels during the
-                        model training.</p>
+                    <h2>OverView</h2>
+                    <p>We provide a large dataset of chest X-rays with strong annotations of foreign objects, and the competition for automatic detection of foreign objects. Specifically, 5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects are provided. All the chest X-ray images were filmed in township hospitals in China and collected through our telemedicine platform. Foreign objects within the lung field of each chest X-ray are annotated with bounding boxes, ellipses or masks depending on the shape of the objects.</p>
+
+                    <h3>Dataset</h3>
+                    <p>5000 frontal chest X-ray images with foreign objects presented and 5000 frontal chest X-ray images without foreign objects were filmed and collected from about 300 township hosiptials in China. 12 medically-trained radiologists with 1 to 3 years of experience annotated all the images. Each annotator manually annotates the potential foreign objects on a given chest X-ray presented within the lung field. Foreign objects were annotated with bounding boxes, bounding ellipses or masks depending on the shape of the objects. Support devices were excluded from annotation. A typical frontal chest X-ray with foreign objects annotated looks like this:</p>
+
                     <ul>
-                        <li><b>U-Ignore</b>: We ignore the uncertain labels during training.</li>
-                        <li><b>U-Zeroes</b>: We map all instances of the uncertain label to 0.</li>
-                        <li><b>U-Ones</b>: We map all instances of the uncertain label to 1.</li>
-                        <li><b>U-SelfTrained</b>: We first train a model using the U-Ignore approach to convergence, and
-                            then use the model to make predictions that re-label each of the uncertainty labels with the
-                            probability prediction outputted by the model.</li>
-                        <li><b>U-MultiClass</b>: We treat the uncertainty label as its own class.</li>
+                        <li><b>training</b>: 4000 chest X-rays with foreign objects presented; 4000 chest X-rays without foreign objects.</li>
+                        <li><b>validation</b>: 500 chest X-rays with foreign objects presented; 500 chest X-rays without foreign objects.</li>
+                        <li><b>test</b>: 500 chest X-rays with foreign objects presented; 500 chest X-rays without foreign objects.</li>
                     </ul>
-                    <p>We focus on the evaluation of 5 observations which we call the competition tasks, selected based
-                        of clinical importance and prevalence: (a) Atelectasis, (b) Cardiomegaly, (c) Consolidation, (d)
-                        Edema, and (e) Pleural Effusion.
-                        We compare the performance of the different uncertainty approaches on a validation set of 200
-                        studies on which the consensus of three radiologist annotations serves as ground truth. Our
-                        baseline model is selected based on the best performing approach on each competition tasks on
-                        the validation set: U-Ones for Atelectasis and Edema, U-MultiClass for Cardiomegaly and Pleural
-                        Effusion, and U-SelfTrained for Consolidation.</p>
+                    <p>We randomly split the 10000 images into training, validation and test dataset.</p>
                 </div>
-                <div class="col-md-5"><img src="/competitions/chexpert/img/figure1.png"></div>
+                <div class="col-md-5"><img src="/competitions/chexpert/img/table1.png"></div>
             </div>
         </div>
     </section>
